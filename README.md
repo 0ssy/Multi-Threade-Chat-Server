@@ -108,4 +108,17 @@ java -cp tools/target/classes:protocol/target/classes com.ChatPlatform.tools.Fuz
 
 MIT
 
-# Multi-Threade-Chat-Server
+## Quick start
+
+```bash
+# Build everything
+./mvnw -q install
+
+# Start the server on port 5000
+java -cp server/target/server-1.0.0-shaded.jar com.ChatPlatform.server.ServerMain 5000
+
+# In another terminal, connect a chat client
+java -cp client/target/classes:protocol/target/classes:server/target/classes com.ChatPlatform.client.TerminalClient localhost 5000
+```
+
+No screenshot is included yet — add one at `docs/screenshot.png` and reference it as `![screenshot](docs/screenshot.png)` if you'd like one in the README.
